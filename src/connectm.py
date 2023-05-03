@@ -253,7 +253,7 @@ class ConnectM(ConnectMBase):
             specified column. False otherwise.
 
         """
-        return self._top[col] <= self._nrows
+        return self._top[col] < self._nrows
 
     def drop_wins(self, col: int, color: PieceColor) -> bool:
         """ Checks whether dropping a piece in this
@@ -286,7 +286,7 @@ class ConnectM(ConnectMBase):
 
         return winner
 
-    def drop(self, col: int, color: PieceColor) -> None:
+    def drop(self, col: int, color: PieceColor) -> bool:
         """ Drops a piece in a column
 
         Args:
