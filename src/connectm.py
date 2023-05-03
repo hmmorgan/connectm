@@ -286,7 +286,7 @@ class ConnectM(ConnectMBase):
 
         return winner
 
-    def drop(self, col: int, color: PieceColor) -> bool:
+    def drop(self, col: int, color: PieceColor) -> None:
         """ Drops a piece in a column
 
         Args:
